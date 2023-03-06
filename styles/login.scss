@@ -1,0 +1,190 @@
+@import "./index";
+@import "./footer";
+@import "./header";
+
+$formBgColor:#FFFFFF;
+$topBorderColor: #3AC7EC; 
+$primaryTxtColor: #222222;
+$radioLabelColor: #333333;
+$labelColor: #666666;
+// $forgetTxtColor: #1F7A54;
+$borderBottomColor: rgba(0, 0, 0, 0.12);
+$btnBgColor: #40D28B;
+$btnTxtColor: #1F2834;
+$btnShadowColor: rgba(0, 0, 0, 0.24);
+$boxShodowColor: #0000003D;
+
+form{
+    height: 580px; 
+    width: 50%;
+    display: block;
+    max-width: 620px;
+    min-width: 353px;
+    background-color: $formBgColor;
+    border-radius: 2px 2px 0px 0px;
+    margin:50px auto 32px auto;
+    padding: 0 32px;
+    border: 1px solid $formBgColor;
+    border-top:4px solid $topBorderColor;
+    box-shadow: 0px 13px 20px $boxShodowColor;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+p{
+    @include setFontSize(16px, 20px, 500);
+}
+
+.flex-container{
+    @include setFlex(start, center);
+}
+
+.form-title{
+    @include setFontSize(24px, 28px, 500);
+    margin: 20px auto 34px auto;
+    color: $primaryTxtColor;
+}
+
+.back-button{
+    @include dimensions(17px, 26px);
+    margin: 20px 0 34px 0;
+}
+
+.radio-icon{
+    @include dimensions(20px, 24px);
+    margin-right: 8px;
+    accent-color: $primaryColor;
+}
+
+.radio-label{
+    @extend p;
+    color: $radioLabelColor;
+    margin-right: 32px;
+}
+
+.dropdown-state{
+    margin-top: 23px;
+}
+
+.dropdown-district{
+    margin: 36px 0 30px 0;
+}
+.dropdown-label{
+    @include setFontSize(12px, 16px);
+    color: $labelColor;
+    margin-bottom: 0;
+}
+
+.dropdown-input{
+    color: $primaryTxtColor;
+    margin: 0;
+    width: 100%;
+    border: none;
+}
+
+.underline{
+    border-bottom: 1px solid $borderBottomColor;
+}
+
+.float-right{
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.forget{
+    @include setFontSize(14px, 18px);
+    color: $primaryColor;
+    margin-top: 0;    
+    float: right;
+}
+
+.margin-top-none{
+    margin-top: 0;
+}
+
+.checkbox-icon{
+    @include dimensions(18px, 24px);
+    margin-right: 5px;
+    accent-color: $primaryColor;
+}
+
+.checkbox-txt{
+    @include setFontSize(16px, 20px, 500);
+    color: $primaryTxtColor;
+    margin-top: 2px;
+
+}
+
+.checkbox-div{
+    margin: 26px 0 34px 0;
+}
+
+#submit-btn{
+    @include dimensions(216px, 40px);
+    @include setFontSize(14px, 18px);
+    margin: 0 auto 24px auto;
+    background-color: $btnBgColor;
+    display: block;
+    border: none;
+    color: $btnTxtColor;
+    box-shadow: 0px 3px 5px $btnShadowColor;
+    cursor: pointer;
+}
+
+.inputContainer {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.input {
+    @include setFontSize(16px,20px);
+    @include dimensions(100%, 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    // height: 100%; 
+    // width: 100%;
+    border: none;
+    border-bottom: 1px solid #DADCE0;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+
+::placeholder {
+    color: transparent;
+}
+
+.label {
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: rgba(102, 102, 102, 1);
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(31, 122, 84, 1);
+    /* border: 2px solid purple; */
+}
+
+.input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}

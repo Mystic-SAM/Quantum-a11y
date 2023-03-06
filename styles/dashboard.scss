@@ -1,0 +1,654 @@
+@import "./index";
+@import "./header";
+@import "./footer";
+
+$primaryTxtColor: #222222;
+$navLinkActiveColor: #FFFFFF;
+$cardBgColor: #FFFFFF;
+$navLinkColor: #3FD28B;
+$notificationBgColor: #2A7FF3;
+$menuHeaderBgColor: #8DDC97;
+$bottomColor: rgba(0, 0, 0, 0.12);
+$filterBgColor: #EEEEEE;
+$filterTxtColor: #333333;
+$filterSecondaryColor: #686868;
+$cardFilterBorderColor: rgba(0, 0, 0, 0.38);
+$notiticationItemBorderColor: #2222221F;
+$notificationItemSecondaryColor: #6E6E6E;
+$unseenItemBgColor: #FFFFEE;
+$btnShadowColor: rgba(0, 0, 0, 0.24);
+$hamburgerHoverColor: #F3F3F3;
+$boxShodowColor: #0000003D;
+$notificationBoxShadowColor: #00000029;
+$validityColor: #D80000;
+$validityBgColor: #FFE4E6;
+
+.green{
+    color: $primaryColor;
+}
+
+.vertical-line{
+    margin: 0 9px 0 8px !important;
+}
+
+.strong{
+    font-weight: bold;
+    color: $primaryTxtColor;
+}
+
+.flex-row{
+    display:flex;
+
+    p{
+        @include setFontSize(12px, 16px,500);
+        font-weight: 500;
+        color: $labelColor;
+        margin:0;
+    }
+}
+
+.skip-content{
+    position: absolute;
+    left: 1%;
+    top: 56px;
+    padding: 4px;
+    transform: translateX(-150%);
+    transition: transform 0.3s;
+    background-color: $navLinkColor;
+    color: $navLinkActiveColor;
+
+    &:focus{
+        transform: translateX(0);
+    }
+}
+
+/* --------------Navbar------------------ */
+.navbar{
+    @include setFlex(end,center);
+    margin-left: auto;
+
+    button{
+        @include setFlex(center, center);
+        margin-right:32px;
+    }
+}
+
+.navbar-middle{
+    @extend .navbar;
+
+    a{
+        @include setFontSize(14px, 14px);
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-right:32px;
+        color: $navLinkColor;
+    }
+}
+
+.navbar-active{
+    color: $navLinkActiveColor !important; 
+    border-bottom: 1px solid $navLinkActiveColor;
+}
+
+.navbar-icon{
+    @include dimensions(21px, 24px);
+}
+
+.user-avatar{
+    @include dimensions(32px, 32px) ;
+    border-radius: 50%;
+    border: 1px solid $navLinkColor;
+}
+
+// -----------------------Header - Notification-----------------------
+.notification{
+    color: $navLinkActiveColor;
+    text-decoration: none;
+    position: relative;
+    @include setFontSize(21px, 24px);
+}
+
+.notification-list-div{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    width: 315px;
+    transform: translateY(-900%);
+    transition: transform 0.2s;
+    max-height: 534px;
+    box-shadow: 0px 3px 6px $notificationBoxShadowColor;
+
+    #notification-list{
+        width: 315px;
+        max-height: 486px;
+        top: 27px;
+        right: 31px;
+        overflow-y: scroll;
+        background: $cardBgColor;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+    }
+
+    button{
+        width: 100%;
+        height:48px;
+        background: $cardBgColor;
+        color: $primaryColor;
+        z-index: 4;
+        top: 513px;
+        right: -1px;
+        margin-top: auto;
+        box-shadow: 1px 1px 9px 0 $btnShadowColor;
+    }
+}
+
+.notification-list-div-show{
+    transform: translateY(0);
+    top: 56px;
+    right: 168px;
+}
+
+.notification-item{
+    @include setFlex(start, start, column);
+    list-style: none;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $notiticationItemBorderColor;
+    padding: 16px;
+
+    p{
+        @include setFontSize(12px,16px,500);
+        color: $primaryTxtColor;
+        margin: 8px 0 0 0;
+    }
+    .notification-label{
+        @include setFontSize(12px,16px,500);
+        color: $notificationItemSecondaryColor;
+    }
+    
+
+    .notification-grid{
+        width: 100%;
+        margin: 0;
+    }
+
+    .notification-left-90{
+        width: 90%;
+        float: left;
+        @include setFontSize(14px,18px,500);
+        color: $primaryTxtColor;
+        margin: 0;    
+    }
+    
+    .notitification-time{
+        @include setFlex(end,center);
+        @include setFontSize(12px, 14px,500);
+        width: 100%;
+        margin-top: 8px;
+        color: $notificationItemSecondaryColor;
+    }
+}
+
+.notification .badge {
+    @include dimensions(19px, 19px);
+    @include setFontSize(12px, 14px);
+    position: absolute;
+    top: -8px;
+    right: -4px;
+    border-radius: 50%;
+    background-color: $notificationBgColor;
+    color: $navLinkActiveColor;
+  }
+
+  .badge{
+    @include setFlex(center, center);
+  }
+
+
+//  ---------------Header - Announcement---------------------- 
+.announcement-list-wrapper{
+    background:$cardBgColor ;
+    position: absolute;
+    display: flex;
+    transform: translateY(-900%);
+    transition: transform 0.2s;
+    // top: 56px;
+    // right: 103px;
+    width: 315px;
+    z-index: 2;
+    flex-direction: column;
+    max-height: 534px;
+    box-shadow: 0px 3px 6px $notificationBoxShadowColor;
+
+    .announcement-list{
+        overflow-y: scroll;
+        background: $cardBgColor;
+        overflow-x: hidden;
+        max-height: 486px;
+        scrollbar-width: thin;
+
+        .announcement-content{
+            @include setFontSize(14px, 18px, 500);
+            color: $primaryTxtColor;
+            margin: 0 0 8px 0;   
+        }
+    }
+
+    .announcement-btn-container{
+        width: 100%;
+        height:48px;
+        top: 485px;
+        right: -1px;
+        display: flex;
+        margin-top: auto;
+    }
+
+    button{
+        width: 50%;
+        background: $cardBgColor;
+        color: $primaryColor;
+        z-index: 4;
+        margin: 0;
+        box-shadow: 1px 1px 9px 0 $btnShadowColor;
+    }
+}
+
+.announcement-list-wrapper-show{
+    transform: translateY(0);
+    top: 56px;
+    right: 103px;
+}
+
+.announcement-sub{
+    @include setFontSize(12px,16px,500);
+    color: $notificationItemSecondaryColor;
+    margin: 0;
+}
+
+.announcement-grid-equispace{
+    width: 100%;
+    margin-top: 8px;
+}
+
+.announcement-left{
+    width: 50%;
+    float: left;
+    @include setFontSize(12px,16px,500);
+    color: $notificationItemSecondaryColor;
+    margin: 0;
+}
+
+.announcement-right{
+    @extend .announcement-left;
+    float: right;
+}
+
+.announcement-left-90{
+    width: 90%;
+    float: left;
+    @include setFontSize(12px,16px,500);
+    color: $primaryTxtColor;
+    margin: 0;
+    span{
+        color: $notificationItemSecondaryColor;
+    }
+
+}
+
+.announcement-right-unseen{
+    float: right;
+    @include dimensions(15px,18px);
+    @include setFlex(center, center);
+    @include setFontSize(16px,16px,800);
+    margin: 0;
+    border: 2px solid  $primaryColor;
+    border-radius: 50%;
+    color: $primaryColor
+}
+
+.announcement-right-10{
+    // width: 10%;
+    @extend .announcement-right-unseen;
+    background-color: $primaryColor;
+    color: $cardBgColor;
+}
+
+.announcemnt-grid-PA{
+    width: 100%;
+    margin: 0;
+}
+
+.announcement-item{
+    @include setFlex(start,start,column);
+    color: #222222;
+    list-style: none;
+    border-bottom: 1px solid $notiticationItemBorderColor;
+    padding: 16px;
+    background:$cardBgColor;
+}
+
+.unseen-item{
+    background: $unseenItemBgColor !important;
+}
+
+/* -----Body------- */
+.main-content{
+    padding: 24px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+    grid-template-rows: 64px 45px auto;
+    grid-gap: 24px;
+    
+}
+.classes{
+    @include setFlex(center, center);
+    grid-column: span 1;
+}
+.courses{
+    @extend .classes;
+    border-bottom: 4px solid $primaryTxtColor;
+}
+
+.menu-header{
+    @include setFontSize(16px, 20px);
+    background: $menuHeaderBgColor 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+    display: grid;
+    margin-bottom: 24px;
+    justify-content: space-around;
+    grid-column: 1/-1;
+    grid-template-columns: repeat( auto-fit, minmax(33.33%, 1fr) );
+    height: 64px;
+}
+
+.menu-header-icon{
+    @include dimensions(29px, 32px);
+    margin-right: 8px;
+}
+
+.menu-header-txt{
+    margin-right: 4px;
+}
+
+.sort-icon{
+    @include dimensions(12px, 24px);
+    margin-left: 24px;
+}
+
+.filter-div{
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat( auto-fit, minmax(33.33%, 1fr) );
+    border-bottom: 1px solid $bottomColor;
+}
+
+.filter-left{
+    grid-column: span 1;
+    @include setFlex(start, center);
+    p{
+        @include setFontSize(12px, 14px);
+        color: $filterSecondaryColor;
+    }
+}
+
+.filter-right{
+    grid-column: span 1;
+    align-items: center;
+    justify-content: end;
+
+    select{
+        border: none;
+        border-bottom: 1px solid $bottomColor;
+        width: 24%;
+        background-color: $filterBgColor;
+        color: $filterTxtColor;
+    }
+
+    label{
+        color: $filterSecondaryColor;
+        @include setFontSize(12px, 16px);
+    }
+}
+
+/* ----------------Card----------------- */
+.main-body{
+    margin: 16px 16px 32px 16px;
+    grid-column: 1/-1;
+    height: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(500px , 1fr));
+    grid-auto-rows: 250px;
+    grid-gap: 45px;
+}
+
+.validity-container{
+    position: relative;
+}
+
+
+
+.card-validity{
+    @include setFontSize(13px, 16px, 500);
+    @include dimensions(13%, 7%);
+    @include setFlex(center, center);
+    position: absolute;
+    background:$validityBgColor;
+    border-radius: 2px;
+    color: $validityColor;
+    top:0;
+    left:0;
+}
+
+.card{
+    height: 246px;
+    background: $cardBgColor 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    // @include setFlex(start, start, column);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 0 24px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.card-body{
+    width: 100%;
+
+    .course-name{
+        @include setFontSize(16px, 20px, 500);
+        color: $primaryTxtColor;
+        margin: 0 0 7px 0;
+    }
+}
+
+.card-image{
+    @include dimensions(132px, 157px);
+    margin: 0 16px 16px 0;
+}
+
+#favourite{
+    @include dimensions(20px, 24px);
+    margin-left: auto;
+}
+
+.syllabus {
+    p{
+       margin-right: 7px;
+   }    
+}
+
+.sub-grade{
+    margin-bottom: 7px;
+}
+
+.syllabus{
+    margin-bottom: 18px;
+}
+.teacher-dropdown {
+    select{
+        border: none;
+        border-bottom: 1px solid $cardFilterBorderColor;
+        padding-bottom: 5px ;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+} 
+
+.option-disabled{
+    color: rgba(34, 34, 34, 0.4) !important;
+}
+
+.card-footer{
+    @include setFlex(space-around,center);
+    border-top:1px solid $bottomColor;
+    
+    button{
+        margin: 18px 0 11px 0;
+    }
+}
+
+.preview-img {
+    @include dimensions(22px, 24px);
+}
+
+.manage-course-img, .grade-submission-img{
+    @include dimensions(18px, 20px);
+}
+
+.reports-img{
+    @include dimensions(26px, 23px);
+}
+
+// -------------------Hamburger Menu-----------------------
+
+#hamburger-icon{
+    display: none;
+    margin-right: 16px;
+}
+
+.hamburger-menu{
+    position: absolute;
+    transform: translateY(-900%);
+    // transform: translateX(500%);
+    transition: transform 0.2s;
+    z-index: 99;
+    background: $cardBgColor;
+    list-style: none;
+    width: 280px;   
+    box-shadow: 0px 13px 20px $boxShodowColor; 
+
+    li{
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                a{
+                    @extend .hamburger-item;
+                    padding: 15px 32px !important;
+                }
+            }
+        }
+    }
+}
+ 
+.hamburger-carrot{
+    float: right;
+    @include dimensions(12px, 24px);
+    margin-right: 8px;
+    rotate: 90deg;
+    transition: rotate 0.3s;
+}
+
+.hamburger-expanded{
+    rotate: -90deg;
+}
+
+.showHamburgerMenu{
+    transform: translateY(0);
+    // transform: translateX(0);
+    top: 36px;
+    right: 22px;
+    padding: 0; 
+}
+.hamburger-item{
+    @include setFontSize(14px, 18px, 500);
+    display: block;
+    color: $primaryColor;
+    text-decoration: none;
+    padding: 15px 16px;
+    text-transform: uppercase;
+
+    :hover{
+        background: $hamburgerHoverColor;
+    }
+}
+
+.inner-item{
+    display:none;
+}
+
+.hamburger-item-active{
+    background: $hamburgerHoverColor;
+}
+
+.non-focusable{
+    visibility: hidden;
+}
+
+// -----------Screen Reader Only---------------
+.sr-only{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    @include dimensions(1px, 1px);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+
+/* ----------Media Queries------------ */
+@media screen and (max-width:1106px) {
+    #hamburger-icon{
+        display: block;
+    }
+
+    .announcement-list-wrapper{
+        right: 170px;
+    }
+
+    .notification-list-div{
+        right: 204px;
+    }
+
+    .navbar-middle{
+        display: none;
+    }
+
+    .main-body{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .card{
+        width: 70%;
+        height: fit-content;
+    }
+
+    .course-name{
+        max-height:40px;
+        overflow: hidden;
+    }
+
+    .card-image{
+        height: auto;
+    }
+}
+
+@media screen and (max-width:686px){
+    .card{
+        width: 90%;
+    }
+}

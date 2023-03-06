@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ----------------SCSS Styles------------ -->
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <title>Quantum - Dashboard</title>
+</head>
+<body>
+    <a href="#main" class="skip-content"> Skip to Main Content</a>
+    <div class="container">
+        <header class="header">
+            <img class="logo-img" src="assets/icons/logo used in header.svg" alt="Quantum">
+            <div class="navbar">
+                <nav class="navbar-middle" aria-label="navigation-label">
+                    <a class="navbar-active" href="#">Dashboard</a>
+                    <a href="#">Content </a>
+                    <a href="#">Users</a>
+                    <a href="#">Report</a>
+                    <a href="#">Admin</a>
+                </nav>
+                
+                <section class="menu-button-links notification-menu"> 
+                    <button id="notification" class="notification BTN" aria-haspopup="true" aria-controls="notification-list" aria-labelledby="notifications-menu-label">
+                        <img id="notification-icon-img" class="navbar-icon" src="assets/icons/alerts.svg" alt="Notifications">
+                        <span id="notification-badge" class="badge" aria-hidden="true"> 0 </span>
+                        <span class="sr-only" id="notifications-menu-label"> </span>
+                    </button>
+                    <div class="notification-list-div non-focusable">
+                        <div id="notification-list" role="menu" aria-labelledby="notification">
+                            
+                        </div>
+                        <button id="notification-btn" tabindex="-1" class="BTN" aria-label="Show all notifications"> Show All</button>
+                    </div>
+                </section>
+                <section class="menu-button-links announcement-menu">
+                    <button id="announcement" class="notification BTN" aria-haspopup="true" aria-controls="announcement-list" aria-labelledby="announcements-menu-label">
+                        <img id="announcement-icon-img" class="navbar-icon" src="assets/icons/announcements.svg" alt="Announcements">
+                        <span id="announcement-badge" class="badge" aria-hidden="true"> 0 </span>
+                        <span class="sr-only" id="announcements-menu-label"> </span>
+                    </button>
+                    <div class="announcement-list-wrapper non-focusable">
+                        <div id="announcement-list" class="announcement-list" role="menu" aria-labelledby="announcement">                       
+                                                
+                        </div> 
+                        <div class="announcement-btn-container">
+                            <button class="BTN announcement-btn" tabindex="-1" aria-label="Show all announcements"> Show All</button>
+                            <button class="BTN announcement-btn" tabindex="-1" aria-label="Clear all announcements"> Clear </button>
+                        </div>
+                    </div>
+                </section>
+                <button class="BTN">
+                    <img class="user-avatar" src="assets/per.jpg" alt="User Avatar">
+                </button>
+                <button class="BTN" id="hamburger-icon" aria-haspopup="true" aria-controls="hamburger-menu-links">
+                    <img class="hamburger-menu-icon" src="assets/icons/hamburger-menu.svg" alt="Hambuger">
+                </button>
+                <!-- <div class="hamburger-menu-wrapper"> -->
+                    <ul id="hamburger-menu-links" class="hamburger-menu non-focusable" aria-labelledby="hamburger-icon" role="menu">
+                        <li class="hamburger-list-item" role="presentation">
+                            <a class="hamburger-item" href="#" role="menuitem" > Dashboard </a>
+                        </li>
+                        <li class="hamburger-list-item" role="presentation">
+                            <a href="#" class="hamburger-item" aria-haspopup="true" aria-expanded="false" aria-controls="contentPanel" id="contentTitle" role="menuitem">
+                                Content <span class="hamburger-carrot" aria-hidden="true"> > </span>
+                            </a>
+                            <ul class="inner-item" id="contentPanel" aria-labelledby="contentTitle" role="menu">
+                                <li role="none"> <a href="#" role="menuitem"> Course Catalog </a></li>
+                            </ul>
+                        </li>
+                        <li class="hamburger-list-item" role="presentation">
+                            <a href="#" class="hamburger-item" aria-haspopup="true" aria-expanded="false" aria-controls="usersPanel" id="usersTitle" role="menuitem"> 
+                                Users <span class="hamburger-carrot" aria-hidden="true"> > </span>
+                            </a>
+                            <ul class="inner-item" id="usersPanel" aria-labelledby="usersTitle" role="menu">
+                                <li role="none"> <a href="#" role="menuitem">Profile</a> </li>
+                                <li role="none"> <a href="#" role="menuitem">Sign Out</a> </li>
+                            </ul>
+                        </li>
+                        <li class="hamburger-list-item" role="presentation">
+                            <a href="#" class="hamburger-item" aria-haspopup="true" aria-expanded="false" aria-controls="reportsPanel" id="reportsTitle" role="menuitem"> 
+                                Reports <span class="hamburger-carrot" aria-hidden="true"> > </span> 
+                            </a>
+                            <ul class="inner-item" id="reportsPanel" aria-labelledby="reportsTitle" role="menu">
+                                <li role="none"> <a href="" role="menuitem"> View Report</a></li>
+                                <li role="none"> <a href="" role="menuitem">Generate Report</a> </li>
+                            </ul>
+                        </li>
+                        <li class="hamburger-list-item" role="presentation">
+                            <a href="#" class="hamburger-item" aria-haspopup="true" aria-expanded="false" aria-controls="adminPanel" id="adminTitle" role="menuitem"> 
+                                Admin <span class="hamburger-carrot" aria-hidden="true"> > </span>
+                            </a>
+                            <ul class="inner-item" id="adminPanel" aria-labelledby="adminTitle" role="menu">
+                                <li role="none"> <a href="" role="menuitem">Course Catalog</a> </li>
+                                <li role="none"> <a href="" role="menuitem">Students Catalog</a> </li>
+                                <li role="none"> <a href="" role="menuitem">Teachers Catalog</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                <!-- </div> -->
+
+                   
+        </header>
+        <main class="main-content" id="main">
+            <div class="menu-header flex-row">
+                <div class="courses">
+                    <button class="BTN">
+                        <img class="menu-header-icon" src="assets/icons/courses.svg" alt="">
+                        <span id="course-num" class="menu-header-txt strong"> 0 </span>
+                        <span class="menu-header-txt"> Courses</span>
+                    </button>
+                </div>
+                <div class="classes">
+                    <button class="BTN">
+                        <img class="menu-header-icon" src="assets/icons/classes.svg" alt="">
+                        <span class="menu-header-txt strong"> 4 </span>
+                        <span class="menu-header-txt"> Classes</span>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-div flex-row">
+                <div class="filter-left">
+                    <p id="filter-course-num">Showing 0 of 0 Courses</p>
+                </div>
+                <div class="filter-right flex-row">
+                    <label for="sort-combobox"> Sort By: </label>  
+                    <select id="sort-combobox">  
+                    <option value="" disabled selected hidden> Course Name...   </option>  
+                    <option value = "Acceleration"> Acceleration   </option>  
+                    <option value = "Displacement"> Displacement  </option>  
+                    <option value = "Velocity"> Velocity  </option>  
+                    </select>
+                    <button class="BTN sort-icon">
+                        <img src="assets/icons/sort.svg" alt="Sort Icon">    
+                    </button>
+                </div>
+            </div>
+            <div class="main-body">
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <a href=""><span> About</span></a>
+                <span class="vertical-line">&#124;</span>
+                <a href=""><span> Contact Us</span></a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo used in footer.svg" alt="QuantumLogo">
+                </div>
+                <p id="copyright"> Copyright &copy; 2022-23</p>
+                <p id="org-name"> Zeus System Pvt. Ltd.</p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- --------------------------Scripts--------------------- -->
+    <!-- -----------Using JS -->
+    <!-- <script src="./js/dashboard.js"></script> -->
+
+    <!-- -----------Using TS -->
+    <script src="./ts/courseCards.js"></script>
+    <script src="./ts/notifications.js"></script>
+    <script src="./ts/announcements.js"></script>
+    <script src="./ts/hamburgerMenu.js"></script>
+    <script src="./ts/menuListBox.js"></script>
+    <script src="./ts/dashboard.js"></script>
+</body>
+</html>

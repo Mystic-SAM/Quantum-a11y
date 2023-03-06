@@ -1,0 +1,83 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ------------SCSS Style------------------------ -->
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Quantum - LogIn</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="logo-img" src="assets/icons/logo used in header.svg" alt="Quantum">
+        </header>
+        <main class="main-content">
+            <form action="">
+                <div class="flex-container">
+                    <button class="BTN back-button" aria-label="Back">
+                        <img  src="assets/icons/back.svg" alt="Back Button" role="none">
+                    </button>
+                    <h2 class="form-title"> Log in with Quantum</h2>
+                </div>
+                <div class="flex-container">
+                    <input type="radio" id="District" class="radio-icon" name="school-type" value="District" checked>
+                    <label class="radio-label" for="District">District</label>
+                    <input type="radio" id="Independent School" class="radio-icon" name="school-type" value="Independent School">
+                    <label class="radio-label" for="Independent School">Independent School</label>
+                </div>
+                <div class="dropdown-state underline">
+                    <label for="state-combobox" class="dropdown-label">State*</label>
+                    <select id="state-combobox" class="dropdown-input" required>  
+                        <option  value = "Albama"> Albama   </option>   
+                        <option  value = "Albama"> Berlin   </option>   
+                        <option  value = "Albama"> Rio   </option>   
+                        <option  value = "Albama"> Helsinkhi   </option>   
+                    </select>
+                </div>
+                <div class="dropdown-district underline">
+                    <label for="district-combobox" class="dropdown-label">District*</label>
+                    <select id="district-combobox" class="dropdown-input" required>  
+                        <option  value = "Albama School District"> Albama School District   </option>   
+                        <option  value = "Albama School District"> Berlin School District   </option>   
+                        <option  value = "Albama School District"> Denver School District   </option>   
+                        <option  value = "Albama School District"> Mascow School District   </option>   
+                    </select>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" class="input" placeholder="Username/Email ID" required>
+                    <label for="" class="label">Username/Email ID*</label>
+                </div>
+                <p class="margin-top-none"><a href="" class="forget"> FORGOT USERNAME?</a></p>           
+                <div class="inputContainer flex-container">
+                    <input type="password" class="input" placeholder="Password" required>
+                    <label for="" class="label">Password*</label>
+                    <img class="float-right" src="assets/icons/preview.svg" alt="View Password Icon">
+                </div>
+                <p class="margin-top-none"> <a href="" class="forget">FORGOT PASSWORD?</a></p>
+                <div class="flex-container checkbox-div">
+                    <input type="checkbox" class="checkbox-icon" id="Remember Me" name="Remember Me"    value="Remember Me"/>    
+                    <label class="checkbox-txt" for="Remember Me">Remember Me</label> 
+                </div>
+                <button id="submit-btn"> Log In</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <a href=""><span> About</span></a>
+                <span class="vertical-line">&#124;</span>
+                <a href=""><span> Contact Us</span></a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo used in footer.svg" alt="Quantum Logo">
+                </div>
+                <p id="copyright"> Copyright &copy; 2022-23</p>
+                <p id="org-name"> Zeus System Pvt. Ltd.</p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>        
+    </div>
+</body>
+</html>

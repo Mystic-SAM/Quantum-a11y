@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "userName":"Wilson Kumar",
+        "content":"No classes will be held on 21st Nov",
+        "filesAttached":2,
+        "timestamp":"15-Sep-2018 at 07:21 pm",
+        "isSeen": true
+    },
+    {
+        "id": 2,
+        "userName":"Samson White",
+        "content":"Guest lecture on Geometry on 20th September",
+        "filesAttached":2,
+        "timestamp":"15-Sep-2018 at 07:21 pm",
+        "isSeen": false
+    },
+    {
+        "id": 3,
+        "userName":"Wilson Kumar",
+        "content":"Additional course materials available on request",
+        "course":"Mathematics 101",
+        "timestamp":"15-Sep-2018 at 07:21 pm",
+        "isSeen": true
+    },
+    {
+        "id": 4,
+        "userName":"Wilson Kumar",
+        "content":"No classes will be held on 25th Dec",
+        "timestamp":"15-Sep-2018 at 07:21 pm",
+        "isSeen": false
+    },
+    {
+        "id": 5,
+        "userName":"Wilson Kumar",
+        "content":"Additional course materials available on request",
+        "course":"Mathematics 101",
+        "timestamp":"15-Sep-2018 at 07:21 pm",
+        "isSeen": false
+    }
+]

@@ -1,0 +1,15 @@
+$borderBottomColor : #31B9E4;
+
+.header{
+    grid-area: h;
+    background:transparent url("../assets/header\ pattern\ image.png") 0% 0%  padding-box;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $borderBottomColor;
+    padding: 10.5px 0 9.5px 24px;
+}
+
+.logo-img{
+    width: 134px;
+    height: 36px;
+}

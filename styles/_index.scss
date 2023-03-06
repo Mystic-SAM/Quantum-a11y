@@ -1,0 +1,63 @@
+@font-face {
+    font-family: quicksand;
+    src: url("../assets/Quicksand\ font\ 1/Quicksand-VariableFont_wght.ttf");
+ }
+
+@mixin setFlex($justifyContent:null, $alignItem:null, $direction:row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent ;
+    align-items: $alignItem;   
+}
+
+@mixin setFontSize($fSize, $lineHieght, $fWeight:null) {
+    font-size: $fSize;
+    line-height: $lineHieght; 
+    font-weight: $fWeight;
+}
+
+@mixin dimensions($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+
+$primaryColor: #1F7A54;
+$primaryTxtColor: #222222;
+$labelColor: #666666;
+
+$bodyBgColor: #EEEEEE;
+
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px;
+    background-color: $bodyBgColor;
+    font-family: quicksand;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: 56px auto 74px;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "c c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+}
+
+.main-content{
+    grid-area: c;
+}
+
+
+.BTN{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

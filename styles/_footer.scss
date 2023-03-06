@@ -1,0 +1,74 @@
+$primaryColor: #1F7A54;
+$primaryTxtColor: #0000001F;
+$secondaryTxtColor: #616161;
+$bgColor: #E0E1E1;
+
+
+
+
+
+.footer{
+    grid-area: f;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top{
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}
+
+.vertical-line{
+    margin: 0 10px 0 8px;
+    color: $primaryTxtColor;
+    height: 18px;
+}
+
+.footer-bottom{
+    background-color: $bgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    height: 24px;
+    
+    img{
+        width: 90px;
+        height: 24px;
+    }
+
+    p{
+        color: $secondaryTxtColor;
+        opacity: 1;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+    }
+}
+
+.footer-logo{
+    border-right: 1px solid $primaryTxtColor;
+    margin: 0 16px;
+    padding-right: 16px;
+    height: 24px;
+}
+
+#copyright{
+    margin-right: 8px;
+}
+
+#org-name{
+    margin-right: 11px;
+    font-weight: bold;
+}
