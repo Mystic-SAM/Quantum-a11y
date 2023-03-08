@@ -18,7 +18,7 @@ class CardType {
 }
 
 const setNumofCourses = (courses):void => {
-    const NumofCoursesEl = document.querySelector("#course-num") as HTMLSpanElement | null;
+    const NumofCoursesEl = document.querySelector(".course-num") as HTMLSpanElement | null;
     NumofCoursesEl.innerText = courses.length; 
 
     const filterCourseShowEl = document.querySelector("#filter-course-num") as HTMLParagraphElement | null;
@@ -28,11 +28,11 @@ const setNumofCourses = (courses):void => {
 const createStarImgStr = (course: CardType):string => {
     if(course.isStarred){
         return ` 
-            <img id="favourite" src="assets/icons/favourite.svg" alt="Favourite Icon">
+            <img id="favourite" src="assets/icons/favourite.svg" alt="Favourite">
         `;
     }else{
         return `
-            <img id="favourite" src="assets/icons/favourite.svg" alt="Favourite Icon" style="filter: grayscale(1);">
+            <img id="favourite" src="assets/icons/favourite.svg" alt="Favourite Icon" style="filter: grayscale(1);" aria-hidden="true">
         `;
     }
 }

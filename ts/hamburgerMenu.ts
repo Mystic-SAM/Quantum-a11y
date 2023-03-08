@@ -171,7 +171,7 @@ const innerHamItemBtnDown = (event) => {
 
     if (event.ctrlKey || event.altKey || event.metaKey) {
         return;
-      }
+    }
 
     if(event.shiftKey){
         if(key === "Tab"){
@@ -228,7 +228,7 @@ const innerHamItemBtnDown = (event) => {
                 break;
 
             default:
-                break;
+                break;  
         }
     }
     if (flag) {

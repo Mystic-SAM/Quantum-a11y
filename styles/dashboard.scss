@@ -100,6 +100,12 @@ $validityBgColor: #FFE4E6;
     border: 1px solid $navLinkColor;
 }
 
+nav{
+    li{
+        list-style: none;
+    }
+}
+
 // -----------------------Header - Notification-----------------------
 .notification{
     color: $navLinkActiveColor;

@@ -43,4 +43,3 @@ Promise.all([
 // .catch(err => console.log("Error: ", err.message));
 
 // ----------------Hamburger Menu---------------------------------
-
