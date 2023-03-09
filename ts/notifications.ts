@@ -1,3 +1,4 @@
+
 const notificationListDiv = document.querySelector(".notification-list-div") as HTMLDivElement | null;
 const NoOfNotification = document.querySelector("#notification-badge") as HTMLSpanElement;
 const notificationIcon = document.querySelector("#notification-icon-img") as HTMLImageElement; 

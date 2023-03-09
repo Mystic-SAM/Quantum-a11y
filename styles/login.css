@@ -96,7 +96,9 @@ html, body {
 
 .header {
   grid-area: h;
-  background: transparent url("../assets/header pattern image.png") 0% 0% padding-box;
+  background: url("../assets/header pattern image.png") padding-box;
+  background-color: rgba(37, 49, 63, 0.7490196078);
+  background-blend-mode: multiply;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #31B9E4;

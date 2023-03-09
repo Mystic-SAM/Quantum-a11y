@@ -1,3 +1,4 @@
+
 class MenuButtonLinks {
     domNode: HTMLDivElement;
     buttonNode: HTMLButtonElement;

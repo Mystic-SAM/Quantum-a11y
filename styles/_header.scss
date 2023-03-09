@@ -2,7 +2,10 @@ $borderBottomColor : #31B9E4;
 
 .header{
     grid-area: h;
-    background:transparent url("../assets/header\ pattern\ image.png") 0% 0%  padding-box;
+    // background:transparent url("../assets/header\ pattern\ image.png") 0% 0%  padding-box;
+    background: url("../assets/header\ pattern\ image.png") padding-box;
+    background-color: #25313fbf;
+    background-blend-mode: multiply;
     display: flex;
     align-items: center;
     border-bottom: 2px solid $borderBottomColor;

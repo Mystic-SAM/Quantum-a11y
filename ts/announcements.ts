@@ -1,3 +1,4 @@
+
 const announcementWrapper = document.querySelector(".announcement-list-wrapper") as HTMLDivElement;
 const NoOfAnnouncement = document.querySelector("#announcement-badge") as HTMLSpanElement;
 const announcementIcon = document.querySelector("#announcement-icon-img") as HTMLImageElement;

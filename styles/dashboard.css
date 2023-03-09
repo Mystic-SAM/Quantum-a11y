@@ -33,7 +33,9 @@ html, body {
 
 .header {
   grid-area: h;
-  background: transparent url("../assets/header pattern image.png") 0% 0% padding-box;
+  background: url("../assets/header pattern image.png") padding-box;
+  background-color: rgba(37, 49, 63, 0.7490196078);
+  background-blend-mode: multiply;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #31B9E4;
@@ -128,7 +130,7 @@ html, body {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
-  font-weight: 500;
+  font-weight: 600;
   color: #666666;
   margin: 0;
 }
@@ -174,7 +176,8 @@ html, body {
 
 .navbar-active {
   color: #FFFFFF !important;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+  padding-bottom: 15px;
 }
 
 .navbar-icon {
@@ -207,8 +210,8 @@ nav li {
   z-index: 2;
   flex-direction: column;
   width: 315px;
-  transform: translateY(-900%);
-  transition: transform 0.2s;
+  height: 0;
+  transition: height 250ms ease-in;
   max-height: 534px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
@@ -235,7 +238,7 @@ nav li {
 }
 
 .notification-list-div-show {
-  transform: translateY(0);
+  height: 534px;
   top: 56px;
   right: 168px;
 }
@@ -313,8 +316,8 @@ nav li {
   background: #FFFFFF;
   position: absolute;
   display: flex;
-  transform: translateY(-900%);
-  transition: transform 0.2s;
+  height: 0;
+  transition: height 250ms ease-in;
   width: 315px;
   z-index: 2;
   flex-direction: column;
@@ -353,7 +356,7 @@ nav li {
 }
 
 .announcement-list-wrapper-show {
-  transform: translateY(0);
+  height: 534px;
   top: 56px;
   right: 103px;
 }

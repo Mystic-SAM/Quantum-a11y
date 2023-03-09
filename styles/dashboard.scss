@@ -41,7 +41,7 @@ $validityBgColor: #FFE4E6;
 
     p{
         @include setFontSize(12px, 16px,500);
-        font-weight: 500;
+        font-weight: 600;
         color: $labelColor;
         margin:0;
     }
@@ -87,7 +87,8 @@ $validityBgColor: #FFE4E6;
 
 .navbar-active{
     color: $navLinkActiveColor !important; 
-    border-bottom: 1px solid $navLinkActiveColor;
+    border-bottom: 4px solid $navLinkActiveColor;
+    padding-bottom: 15px;
 }
 
 .navbar-icon{
@@ -120,8 +121,9 @@ nav{
     z-index: 2;
     flex-direction: column;
     width: 315px;
-    transform: translateY(-900%);
-    transition: transform 0.2s;
+    // transform: translateY(-900%);
+    height: 0;
+    transition: height 250ms ease-in;
     max-height: 534px;
     box-shadow: 0px 3px 6px $notificationBoxShadowColor;
 
@@ -150,7 +152,8 @@ nav{
 }
 
 .notification-list-div-show{
-    transform: translateY(0);
+    // transform: translateY(0);
+    height: 534px;
     top: 56px;
     right: 168px;
 }
@@ -216,8 +219,9 @@ nav{
     background:$cardBgColor ;
     position: absolute;
     display: flex;
-    transform: translateY(-900%);
-    transition: transform 0.2s;
+    // transform: translateY(-900%);
+    height: 0;
+    transition: height 250ms ease-in;
     // top: 56px;
     // right: 103px;
     width: 315px;
@@ -260,7 +264,8 @@ nav{
 }
 
 .announcement-list-wrapper-show{
-    transform: translateY(0);
+    // transform: translateY(0);
+    height: 534px;
     top: 56px;
     right: 103px;
 }
