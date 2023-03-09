@@ -1,0 +1,142 @@
+@import "./common_style";
+@import "./nav_style";
+@import "./footer_style";
+
+.content-body {
+  background-color: $white;
+  padding: 50px 0 16px;
+  flex: 1;
+}
+
+/* ========================================================
+                    login Container
+======================================================== */
+.login-container {
+  border-top: 4px solid $underline_blue;
+  width: 488px;
+  padding: 20px 32px;
+  margin: 0 auto;
+  background-color: $pure_white;
+  .login-header {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    color: $blank;
+    .login-heading {
+      grid-column: 3 / -1;
+      margin-bottom: 9px;
+    }
+
+    .back-btn-link {
+      grid-column: span 2;
+    }
+  }
+}
+
+.select-btn-group {
+  margin: 23px 0;
+  display: flex;
+}
+
+.select-btn-container {
+  margin-right: 32px;
+  align-items: center;
+  * {
+    vertical-align: middle;
+  }
+  input {
+    font-size: 20px;
+    height: 24px;
+    width: 20px;
+  }
+  label {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+}
+
+.input-div--normal_margin {
+  margin-bottom: 33px;
+}
+
+.input-div--extra_margin {
+  margin-bottom: 56px;
+}
+
+.input-div--less-margin {
+  margin-bottom: 24px;
+}
+
+.input-div--lable {
+  color: $gray;
+  display: block;
+  font-size: 12px;
+  /* margin-left: px; */
+}
+
+// .input-div--control {
+//   width: 100%;
+//   background: $pure_white;
+//   border: none;
+//   color: $blank;
+//   font-size: 16px;
+//   margin: 5px 0;
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+//   &:focus-visible {
+//     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+//     outline: 0;
+//   }
+//   &:focus {
+//     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+//   }
+// }
+
+// .input-div--control_arrow {
+//   appearance: none;
+//   padding-right: 20px;
+//   background-image: url("../assets/icons/arrow-down.svg");
+//   background-repeat: no-repeat;
+//   background-position: calc(100% - 3px) center;
+//   background-size: 20px;
+// }
+
+// .input-div-forgot-link {
+//   color: $dark_green;
+//   font-size: 14px;
+//   display: block;
+//   text-decoration: no;
+//   text-align: right;
+//   font-feature-settings: "smcp";
+//   text-transform: uppercase;
+// }
+
+.input-div--password-div {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  .input-div--pwd {
+    border-bottom: none;
+    grid-column: 1/12;
+    &focus {
+      border-bottom: none;
+    }
+  }
+  .show-btn {
+    background: none;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.submit-btn {
+  display: block;
+  background: $bg_green;
+  height: 40px;
+  padding: 10px 85px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  margin: 0 auto;
+}

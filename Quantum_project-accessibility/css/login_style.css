@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../assets/Quicksand\ font\ 1/Quicksand-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    background-image: url("../assets/header_pattern_image.png");
+    background-color: #25313F;
+    background-blend-mode: multiply;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 11px 24px;
+    height: 47px;
+    border-bottom: 2px solid #31B9E4;
+}
+
+.fram-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    width: 134px;
+}
+
+.content-body {
+    background-color: #EEEEEE;
+    padding: 50px 0 16px;
+    flex: 1;
+}
+
+/* ========================================================
+                    login Container
+======================================================== */
+.login-container {
+    border-top: 4px solid #3AC7EC;
+    width: 488px;
+    padding: 20px 32px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.login-header {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    color: #222222;
+}
+
+.back-btn-link {
+    grid-column: span 2;
+}
+
+.login-heading {
+    grid-column: 3 / -1;
+    margin-bottom: 9px;
+}
+
+
+.select-btn-group {
+    margin: 23px 0;
+    display: flex;
+}
+
+.select-btn-container {
+    margin-right: 32px;
+    align-items: center;
+}
+
+.select-btn-container input {
+    font-size: 20px;
+    height: 24px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.select-btn-container label {
+    font-size: 16px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.input-div--normal_margin {
+    margin-bottom: 33px;
+}
+
+.input-div--extra_margin {
+    margin-bottom: 56px;
+}
+
+.input-div--less-margin {
+    margin-bottom: 24px;
+}
+
+.input-div--lable {
+    color: #666666;
+    display: block;
+    font-size: 12px;
+    /* margin-left: px; */
+}
+
+.input-div--control {
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    color: #222222;
+    font-size: 16px;
+    margin: 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.input-div--control_arrow {
+    appearance: none;
+    padding-right: 20px;
+    background-image: url("../assets/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3px) center;
+    background-size: 20px;
+}
+
+.input-div--control:focus-visible {
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    outline: 0;
+}
+
+.input-div--control:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+}
+
+.input-div--control option {
+    margin: 0;
+}
+
+.input-div-forgot-link {
+    color: #1F7A54;
+    font-size: 14px;
+    display: block;
+    text-decoration: no;
+    text-align: right;
+    font-feature-settings: "smcp";
+    text-transform: uppercase;
+}
+
+.input-div--password-div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.input-div--pwd {
+    border-bottom: none;
+    grid-column: 1/12;
+}
+
+.input-div--pwd:focus {
+    border-bottom: none;
+}
+
+.show-btn {
+    background: none;
+    border: none;
+}
+
+.show-btn:hover {
+    cursor: pointer;
+}
+
+.submit-btn {
+    display: block;
+    background: #3FD28B;
+    height: 40px;
+    padding: 10px 85px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+/* 
+    footer style
+*/
+
+.footer {
+    margin-top: auto;
+}
+
+.footer-option_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    background-color: #EEEEEE;
+}
+
+.footer-option_link {
+    color: #1F7A54;
+    font-size: 16px;
+    letter-spacing: 0px;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.footer-option_link:nth-of-type(1) {
+    border-right: 1px solid #1F7A54;
+}
+
+.footer-content {
+    background-color: #E0E1E1;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.footer-content * {
+    vertical-align: middle;
+}
+
+.footer-logo {
+    height: 24px;
+    padding-right: 16px;
+    margin-right: 12px;
+    border-right: 1px solid #616161;
+}
+
+.footer-content--span {
+    font-size: 12px;
+    color: #616161;
+    margin: 0 4px;
+}
+
+.util-bold-font {
+    font-weight: 900;
+}

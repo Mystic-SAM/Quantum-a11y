@@ -1,0 +1,81 @@
+[
+    {
+        "img":"/assets/images/imageMask.png",
+        "is_starred": true,
+        "class_heading": "Acceleration",
+        "cetegory": "Physics",
+        "grad": "Grade 7 +2",
+        "details": {
+            "number_of_unit": 4,
+            "number_of_lession": 12,
+            "number_of_topics": 24
+        } ,
+        "course_duration":{
+            "starting_date" : "21-Jan-2020",
+            "ending_date":"21-Aug-2020"
+        },
+            "student": 50,
+            "is_expire": false,
+            "options": [
+                "Mr. Frank's Class B",
+                "All Classes",
+                "Mr. Frank's Class A"
+            ]
+            
+    },
+    {
+        "class_heading": "Displacement, Velocity and Speed",
+        "cetegory": "Physics 2",
+        "grad": "Grade 6 +3",
+        "details": {
+            "number_of_unit": 2,
+            "number_of_lession": 15,
+            "number_of_topics": 20
+        } ,
+            "student": 0,
+            "is_starred": true,
+            "img":"/assets/images/imageMask-2.png",
+            "is_expire": false,
+            "action":{
+                "disableSubmission":true,
+                "disableCourseManager":true
+            }
+    },
+    {
+        "img":"/assets/images/imageMask-3.png",
+        "class_heading": "Introduction to Biology: Micro organisms and how they affec...",
+        "cetegory": "Physics",
+        "grad": "Grade 4 +1",
+        "details": {
+            "number_of_unit": 5,
+            "number_of_lession": 16,
+            "number_of_topics": 22
+        } ,
+            "student": 300,
+            "is_starred": true,
+            "action":{
+                "disableCourseManager": true,
+                "disableSubmission":true
+            }
+    },
+    
+    {
+        "img":"/assets/images/imageMask-1.png",
+        "is_starred": false,
+        "class_heading": "Introduction to High School Mathematics",
+        "cetegory": "Mathematics",
+        "grad": "Grade 8 +3",
+        "student": 44,
+        "course_duration":{
+            "starting_date" : "14-Oct-2019",
+            "ending_date":"20-Oct-2020"
+        },
+        "is_expire": true,
+        "options": [
+            "Mr. Frank's Class B",
+            "All Classes",
+            "Mr. Frank's Class A"
+        ]
+            
+    }
+]

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/login_style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf" as="font" type="font/ttf"
+        crossorigin="anonymous">
+        <meta name="description" content="Quantum Portal login form">
+        <meta name="keywords" content="Quantum, Quantum Login, Quantum Protal, quantum, quantum protal, quantum portal login, quantum login form">
+    <title>login </title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="fram-container">
+            <a href="#">
+                <img class="header-logo" src="assets/icons/logo used in header.svg" alt="Quantun Logo">
+            </a>
+        </div>
+    </header>
+    <main class="content-body">
+        <section class="login-container" aria-labelledby="login-heading" >
+            <div class="login-header">
+                <a href="#" class="back-btn-link">
+                    <img src="assets/icons/back.svg" alt="back button">
+                </a>
+                <h1 class="login-heading" id="login-heading">
+                    Log in with Quantun
+                </h1>
+            </div>
+
+            <div class="login-body">
+                <form action="" aria-labelledby="login-heading">
+                    <div class="select-btn-group">
+                        <div class="select-btn-container">
+                            <input type="radio" autofocus id="district_school" value="district" name="school_type">
+                            <label for="district_school">District</label>
+                        </div>
+                        <div class="select-btn-container">
+                            <input type="radio" id="independent_school" value="independent" name="school_type">
+                            <label for="independent_school">Independent school</label>
+                        </div>
+                    </div>
+
+                    <div class="input-div--normal_margin">
+                        <label for="state" class="input-div--lable">State*</label>
+                        <select name="state" id="state" class="input-div--control input-div--control_arrow">
+                            <option value="">Alabama</option>
+                            <option value="">Alabama</option>
+                            <option value="">Alabama</option>
+                            <option value="">Alabama</option>
+                            <option value="">Alabama</option>
+                        </select>
+                    </div>
+
+                    <div class="input-div--extra_margin">
+                        <label for="district" class="input-div--lable">District*</label>
+                        <select name="district" id="district" class="input-div--control input-div--control_arrow">
+                            <option value="alabama_scholl_district">Alabama Scholl District</option>
+                            <option value="alabama_scholl_district">Alabama Scholl District</option>
+                            <option value="alabama_scholl_district">Alabama Scholl District</option>
+                            <option value="alabama_scholl_district">Alabama Scholl District</option>
+                            <option value="alabama_scholl_district">Alabama Scholl District</option>
+                        </select>
+                    </div>
+
+                    <div class="input-div--normal_margin">
+                        <input type="text" aria-label="User name" name="user_id" class="input-div--control" placeholder="User Name/ Email id*">
+                        <a href="#" class="input-div-forgot-link">Forgot Username?</a>
+                    </div>
+
+                    <div class="input-div--less-margin">
+                        <div class="input-div--password-div">
+                            <input type="password" aria-label="User Password" name="pwd" class="input-div--control input-div--pwd"
+                                placeholder="Password*">
+                            <button class="show-btn" role="button" aria-label="Show Password" type="button">
+                                <img src="assets/icons/preview.svg" alt="">
+                            </button>
+                        </div>
+                        <a href="#" class="input-div-forgot-link">Forgot password?</a>
+                    </div>
+
+                    <div class="select-btn-container input-div--normal_margin">
+                        <input type="checkbox" name="remember_me" id="remember_me">
+                        <label for="remember_me">Remember me</label>
+                    </div>
+
+                    <button class="submit-btn ">
+                        LOG IN
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-option_div">
+            <a href="" class="footer-option_link">About</a>
+            <a href="" class="footer-option_link">Contect Us</a>
+        </div>
+        <div class="footer-content">
+            <img class="footer-logo" src="assets/icons/logo used in footer.svg" alt="Quantum Footer logo">
+            <span class="footer-content--span">Copyright &copy; 2020-2021</span>
+            <span class="footer-content--span util-bold-font">Zeus System Pvt. Ltd.</span>
+            <span class="footer-content--span">All right reserved</span>
+        </div>
+    </footer>
+    <script src="js/login_script.js" defer></script>
+</body>
+
+</html>
