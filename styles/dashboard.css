@@ -206,6 +206,8 @@ nav li {
 
 .notification-list-div {
   position: absolute;
+  top: 56px;
+  right: 168px;
   display: flex;
   z-index: 2;
   flex-direction: column;
@@ -239,8 +241,6 @@ nav li {
 
 .notification-list-div-show {
   height: 534px;
-  top: 56px;
-  right: 168px;
 }
 
 .notification-item {
@@ -318,6 +318,8 @@ nav li {
   display: flex;
   height: 0;
   transition: height 250ms ease-in;
+  top: 56px;
+  right: 103px;
   width: 315px;
   z-index: 2;
   flex-direction: column;
@@ -357,8 +359,6 @@ nav li {
 
 .announcement-list-wrapper-show {
   height: 534px;
-  top: 56px;
-  right: 103px;
 }
 
 .announcement-sub {

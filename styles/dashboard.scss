@@ -117,6 +117,8 @@ nav{
 
 .notification-list-div{
     position: absolute;
+    top: 56px;
+    right: 168px;
     display: flex;
     z-index: 2;
     flex-direction: column;
@@ -153,9 +155,7 @@ nav{
 
 .notification-list-div-show{
     // transform: translateY(0);
-    height: 534px;
-    top: 56px;
-    right: 168px;
+    height: 534px; 
 }
 
 .notification-item{
@@ -222,8 +222,8 @@ nav{
     // transform: translateY(-900%);
     height: 0;
     transition: height 250ms ease-in;
-    // top: 56px;
-    // right: 103px;
+    top: 56px;
+    right: 103px;
     width: 315px;
     z-index: 2;
     flex-direction: column;
@@ -266,8 +266,6 @@ nav{
 .announcement-list-wrapper-show{
     // transform: translateY(0);
     height: 534px;
-    top: 56px;
-    right: 103px;
 }
 
 .announcement-sub{
