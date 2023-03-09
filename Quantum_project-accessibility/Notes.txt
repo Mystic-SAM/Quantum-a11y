@@ -1,6 +1,0 @@
-replace comman div with appropriate landmark tags.
-make interactive elements tab-indexable 
-Make hover functionality, clickable 
-add keyboard functionality to Custom elements
-Add keyboard functionality to custome widget
-
