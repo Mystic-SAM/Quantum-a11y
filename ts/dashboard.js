@@ -1,3 +1,7 @@
+import { renderCards } from "./courseCards.js";
+import { MenuButtonLinks } from "./menuListBox.js";
+import { renderAnnouncements } from "./announcements.js";
+import { renderNotifications } from "./notifications.js";
 const getData = async (srcPath) => {
     const response = await fetch(srcPath);
     if (response.status !== 200) {

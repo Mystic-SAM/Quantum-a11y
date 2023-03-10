@@ -1,3 +1,4 @@
+import { notificationHide } from "./notifications.js";
 const announcementWrapper = document.querySelector(".announcement-list-wrapper");
 const NoOfAnnouncement = document.querySelector("#announcement-badge");
 const announcementIcon = document.querySelector("#announcement-icon-img");
@@ -5,7 +6,7 @@ const announcementButtons = document.querySelectorAll(".announcement-btn"); // A
 const announcementMenuNode = announcementWrapper.querySelector('[role="menu"]');
 const announcementBtn = document.querySelector("#announcement"); // Announcement List Trigger
 const announcementLabelEl = document.querySelector("#announcements-menu-label");
-const announcementHideCaller = () => {
+export const announcementHideCaller = () => {
     setTimeout(() => {
         if (announcementWrapper.parentNode.querySelector(":hover") == announcementWrapper) {
             announcementWrapper.addEventListener("mouseleave", announcementHide, false);
@@ -15,7 +16,7 @@ const announcementHideCaller = () => {
         }
     }, 50);
 };
-const announcementHide = () => {
+export const announcementHide = () => {
     announcementWrapper.classList.remove("announcement-list-wrapper-show");
     announcementWrapper.classList.add("non-focusable");
     announcementMenuNode.style.display = "none";
@@ -25,7 +26,7 @@ const announcementHide = () => {
         button.setAttribute("tabindex", "-1");
     });
 };
-const announcementShow = () => {
+export const announcementShow = () => {
     if (menu.classList.contains("showHamburgerMenu")) {
         menu.classList.remove("showHamburgerMenu");
         menuIcon.style.filter = "brightness(1)";
@@ -58,7 +59,7 @@ const setAnnouncementLabel = (announcements) => {
 // announcementBtn.addEventListener("mouseover",announcementShow, false);
 // announcementBtn.addEventListener("mouseleave",announcementHideCaller);
 announcementButtons[1].addEventListener("keydown", onClearBtnDown);
-const renderAnnouncements = (announcements) => {
+export const renderAnnouncements = (announcements) => {
     let announcementContainer = document.querySelector(".announcement-list");
     let announcementBody = "";
     setAnnouncementLabel(announcements);

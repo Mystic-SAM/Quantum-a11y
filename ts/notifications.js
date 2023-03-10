@@ -1,3 +1,4 @@
+import { announcementHide } from "./announcements.js";
 const notificationListDiv = document.querySelector(".notification-list-div");
 const NoOfNotification = document.querySelector("#notification-badge");
 const notificationIcon = document.querySelector("#notification-icon-img");
@@ -5,7 +6,7 @@ const notificationButton = document.querySelector("#notification-btn"); // NOtif
 const NotificationMenuNode = notificationListDiv.querySelector('[role="menu"]');
 const notificationBtn = document.querySelector("#notification"); // Notification List Trigger
 const notificationLabelEl = document.querySelector('#notifications-menu-label');
-const notificationHideCaller = () => {
+export const notificationHideCaller = () => {
     setTimeout(() => {
         if (notificationListDiv.parentNode.querySelector(":hover") == notificationListDiv) {
             notificationListDiv.addEventListener("mouseleave", notificationHide, false);
@@ -15,7 +16,7 @@ const notificationHideCaller = () => {
         }
     }, 100);
 };
-const notificationHide = () => {
+export const notificationHide = () => {
     notificationListDiv.classList.remove("notification-list-div-show");
     notificationListDiv.classList.add("non-focusable");
     NotificationMenuNode.style.display = "none";
@@ -23,7 +24,7 @@ const notificationHide = () => {
     NoOfNotification.style.display = "flex";
     notificationButton.setAttribute("tabindex", "-1");
 };
-const notificationShow = () => {
+export const notificationShow = () => {
     if (menu.classList.contains("showHamburgerMenu")) {
         menu.classList.remove("showHamburgerMenu");
         menuIcon.style.filter = "brightness(1)";
@@ -54,7 +55,7 @@ const setNotificationLabel = (notifications) => {
 // notificationBtn.addEventListener("mouseenter", notificationShow, false);
 // notificationBtn.addEventListener("mouseleave", notificationHideCaller, false);
 notificationButton.addEventListener("keydown", onNotificationBtnDown);
-const renderNotifications = (notifications) => {
+export const renderNotifications = (notifications) => {
     const notificationWrapper = document.querySelector("#notification-list");
     let notificationBody = " ";
     setNotificationLabel(notifications);

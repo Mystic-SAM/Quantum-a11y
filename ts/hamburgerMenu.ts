@@ -27,8 +27,8 @@ const toggleMenu = ():void => {
         menu.classList.add("non-focusable");
         menuIcon.style.filter = "brightness(1)";
     }else{
-        announcementHide();
-        notificationHide();
+        // announcementHide();
+        // notificationHide();
         hideInnerMenu();        
         menu.classList.add("showHamburgerMenu");
         menu.classList.remove("non-focusable");

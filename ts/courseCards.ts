@@ -102,7 +102,7 @@ const createCardValidityStr = (course: CardType):string => {
     return cardValidityStr;    
 }
 
-const renderCards = (courses):void => {
+export const renderCards = (courses):void => {
     let cardEl:string = "";
     setNumofCourses(courses);
 

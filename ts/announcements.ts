@@ -1,3 +1,4 @@
+import { notificationHide } from "./notifications.js";
 
 const announcementWrapper = document.querySelector(".announcement-list-wrapper") as HTMLDivElement;
 const NoOfAnnouncement = document.querySelector("#announcement-badge") as HTMLSpanElement;
@@ -7,7 +8,7 @@ const announcementMenuNode = announcementWrapper.querySelector('[role="menu"]') 
 const announcementBtn = document.querySelector("#announcement") as HTMLButtonElement; // Announcement List Trigger
 const announcementLabelEl = document.querySelector("#announcements-menu-label") as HTMLSpanElement;
 
-const announcementHideCaller = ():void =>{
+export const announcementHideCaller = ():void =>{
     setTimeout(() => {
         if(announcementWrapper.parentNode.querySelector(":hover") == announcementWrapper){
             announcementWrapper.addEventListener("mouseleave",announcementHide, false);
@@ -17,7 +18,7 @@ const announcementHideCaller = ():void =>{
     },50);
 }
 
-const announcementHide = ():void =>{
+export const announcementHide = ():void =>{
     announcementWrapper.classList.remove("announcement-list-wrapper-show");
     announcementWrapper.classList.add("non-focusable");
     announcementMenuNode.style.display = "none";
@@ -27,7 +28,7 @@ const announcementHide = ():void =>{
         button.setAttribute("tabindex","-1");
     })    
 }
-const announcementShow = ():void =>{
+export const announcementShow = ():void =>{
     if(menu.classList.contains("showHamburgerMenu")){
         menu.classList.remove("showHamburgerMenu");
         menuIcon.style.filter = "brightness(1)";
@@ -65,7 +66,7 @@ const setAnnouncementLabel = (announcements):void => {
 
 announcementButtons[1].addEventListener("keydown", onClearBtnDown);
 
-const renderAnnouncements = (announcements):void => {
+export const renderAnnouncements = (announcements):void => {
     let announcementContainer = document.querySelector(".announcement-list") as HTMLDivElement;
     let announcementBody:string = "";
 

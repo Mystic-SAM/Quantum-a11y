@@ -26,8 +26,8 @@ const toggleMenu = () => {
         menuIcon.style.filter = "brightness(1)";
     }
     else {
-        announcementHide();
-        notificationHide();
+        // announcementHide();
+        // notificationHide();
         hideInnerMenu();
         menu.classList.add("showHamburgerMenu");
         menu.classList.remove("non-focusable");

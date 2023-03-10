@@ -1,5 +1,7 @@
+import { notificationShow, notificationHideCaller } from "./notifications.js";
+import { announcementShow, announcementHideCaller } from "./announcements.js";
 
-class MenuButtonLinks {
+export class MenuButtonLinks {
     domNode: HTMLDivElement;
     buttonNode: HTMLButtonElement;
     menuNode: HTMLDivElement;
@@ -50,7 +52,6 @@ class MenuButtonLinks {
   
       // domNode.addEventListener("focusin", this.onFocusin.bind(this));
       // domNode.addEventListener("focusout", this.onFocusout.bind(this));
-  
   
       window.addEventListener(
         "mousedown",
@@ -152,6 +153,7 @@ class MenuButtonLinks {
         announcementShow();
       }
       this.menuNode.style.display = "block";
+      this.menuNode.scrollTop = 0;
       this.buttonNode.setAttribute("aria-expanded", "true");
     }
   

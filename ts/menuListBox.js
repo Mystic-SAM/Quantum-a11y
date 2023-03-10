@@ -1,4 +1,6 @@
-class MenuButtonLinks {
+import { notificationShow, notificationHideCaller } from "./notifications.js";
+import { announcementShow, announcementHideCaller } from "./announcements.js";
+export class MenuButtonLinks {
     domNode;
     buttonNode;
     menuNode;
@@ -115,6 +117,7 @@ class MenuButtonLinks {
             announcementShow();
         }
         this.menuNode.style.display = "block";
+        this.menuNode.scrollTop = 0;
         this.buttonNode.setAttribute("aria-expanded", "true");
     }
     closePopup() {

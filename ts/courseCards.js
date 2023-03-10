@@ -97,7 +97,7 @@ const createCardValidityStr = (course) => {
     }
     return cardValidityStr;
 };
-const renderCards = (courses) => {
+export const renderCards = (courses) => {
     let cardEl = "";
     setNumofCourses(courses);
     for (let course of courses) {

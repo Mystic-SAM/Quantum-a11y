@@ -1,3 +1,4 @@
+import { announcementHide } from "./announcements.js";
 
 const notificationListDiv = document.querySelector(".notification-list-div") as HTMLDivElement | null;
 const NoOfNotification = document.querySelector("#notification-badge") as HTMLSpanElement;
@@ -7,7 +8,7 @@ const NotificationMenuNode = notificationListDiv.querySelector('[role="menu"]') 
 const notificationBtn = document.querySelector("#notification") as HTMLButtonElement | null; // Notification List Trigger
 const notificationLabelEl = document.querySelector('#notifications-menu-label') as HTMLSpanElement; 
 
-const notificationHideCaller = ():void=>{
+export const notificationHideCaller = ():void=>{
     setTimeout(() => {
         if(notificationListDiv.parentNode.querySelector(":hover") == notificationListDiv){
             notificationListDiv.addEventListener("mouseleave",notificationHide, false);
@@ -17,7 +18,7 @@ const notificationHideCaller = ():void=>{
     },100);
 }
 
-const notificationHide = ():void =>{
+export const notificationHide = ():void =>{
     notificationListDiv.classList.remove("notification-list-div-show");
     notificationListDiv.classList.add("non-focusable");
     NotificationMenuNode.style.display = "none";
@@ -25,7 +26,7 @@ const notificationHide = ():void =>{
     NoOfNotification.style.display = "flex";
     notificationButton.setAttribute("tabindex","-1");    
 }
-const notificationShow = ():void =>{
+export const notificationShow = ():void =>{
     if(menu.classList.contains("showHamburgerMenu")){
         menu.classList.remove("showHamburgerMenu");
         menuIcon.style.filter = "brightness(1)";
@@ -59,7 +60,7 @@ const setNotificationLabel = (notifications):void => {
 // notificationBtn.addEventListener("mouseenter", notificationShow, false);
 // notificationBtn.addEventListener("mouseleave", notificationHideCaller, false);
 notificationButton.addEventListener("keydown", onNotificationBtnDown);
-const renderNotifications = (notifications):void => {
+export const renderNotifications = (notifications):void => {
     const notificationWrapper = document.querySelector("#notification-list") as HTMLDivElement;
     let notificationBody: string = " ";
 
