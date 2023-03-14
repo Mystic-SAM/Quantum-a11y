@@ -6,7 +6,7 @@ $primaryTxtColor: #222222;
 $navLinkActiveColor: #FFFFFF;
 $cardBgColor: #FFFFFF;
 $navLinkColor: #3FD28B;
-$notificationBgColor: #2A7FF3;
+$notificationBgColor: #083D87;
 $menuHeaderBgColor: #8DDC97;
 $bottomColor: rgba(0, 0, 0, 0.12);
 $filterBgColor: #EEEEEE;
@@ -514,7 +514,7 @@ nav{
     @include setFlex(space-around,center);
     border-top:1px solid $bottomColor;
     
-    button{
+    img{
         margin: 18px 0 11px 0;
     }
 }

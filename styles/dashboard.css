@@ -321,7 +321,7 @@ nav li {
   top: -8px;
   right: -4px;
   border-radius: 50%;
-  background-color: #2A7FF3;
+  background-color: #083D87;
   color: #FFFFFF;
 }
 
@@ -653,7 +653,7 @@ nav li {
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
-.card-footer button {
+.card-footer img {
   margin: 18px 0 11px 0;
 }
 

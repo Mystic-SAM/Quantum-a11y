@@ -107,23 +107,15 @@ export const renderCards = (courses) => {
         let courseDateElement = createCourseDateEl(course);
         let cardValidityString = createCardValidityStr(course);
         let cardFooter = `
-            <aside class="card-footer">
-                <button class="BTN" role="presentation" title="Preview Course">
-                    <img class="preview-img" src="assets/icons/preview.svg" 
-                    alt="Preview course ${course.name}" role="button">
-                </button>
-                <button class="BTN" role="presentation" title="Manage Course">
-                    <img class="manage-course-img" src="assets/icons/manage course.svg" 
-                    alt="Manage Course ${course.name}" role="button">
-                </button>
-                <button class="BTN" role="presentation" title="Submit Grade">
-                    <img class="grade-submission-img" src="assets/icons/grade submissions.svg" 
-                    alt="Grade Submisssion for ${course.name}" role="button">
-                </button>
-                <button class="BTN" role="presentation" title="Get Reports">
-                    <img class="reports-img" src="assets/icons/reports.svg" 
-                    alt="Get reports for ${course.name} " role="button">
-                </button>
+            <aside class="card-footer" aria-label="Course Options ${course.name}">
+                <img class="preview-img BTN" src="assets/icons/preview.svg" 
+                alt="Preview course ${course.name}" role="button" title="Preview Course" tabindex="0">
+                <img class="manage-course-img BTN" src="assets/icons/manage course.svg" 
+                alt="Manage Course ${course.name}" role="button" title="Manage Course" tabindex="0">
+                <img class="grade-submission-img BTN" src="assets/icons/grade submissions.svg" 
+                alt="Grade Submisssion for ${course.name}" role="button" title="Submit Grade" tabindex="0">
+                <img class="reports-img BTN" src="assets/icons/reports.svg" 
+                alt="Get reports for ${course.name} " role="button" title="Get Reports" tabindex="0">
             </aside>
         `;
         cardEl += `
