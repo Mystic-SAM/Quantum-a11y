@@ -108,19 +108,19 @@ export const renderCards = (courses) => {
         let cardValidityString = createCardValidityStr(course);
         let cardFooter = `
             <aside class="card-footer">
-                <button class="BTN" role="presentation">
+                <button class="BTN" role="presentation" title="Preview Course">
                     <img class="preview-img" src="assets/icons/preview.svg" 
                     alt="Preview course ${course.name}" role="button">
                 </button>
-                <button class="BTN" role="presentation">
+                <button class="BTN" role="presentation" title="Manage Course">
                     <img class="manage-course-img" src="assets/icons/manage course.svg" 
                     alt="Manage Course ${course.name}" role="button">
                 </button>
-                <button class="BTN" role="presentation">
+                <button class="BTN" role="presentation" title="Submit Grade">
                     <img class="grade-submission-img" src="assets/icons/grade submissions.svg" 
                     alt="Grade Submisssion for ${course.name}" role="button">
                 </button>
-                <button class="BTN" role="presentation">
+                <button class="BTN" role="presentation" title="Get Reports">
                     <img class="reports-img" src="assets/icons/reports.svg" 
                     alt="Get reports for ${course.name} " role="button">
                 </button>

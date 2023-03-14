@@ -25,7 +25,7 @@
                 </nav>
                 
                 <section class="menu-button-links notification-menu"> 
-                    <button id="notification" class="notification BTN" aria-haspopup="true" aria-controls="notification-list" aria-labelledby="notifications-menu-label">
+                    <button id="notification" class="notification BTN" aria-haspopup="true" aria-controls="notification-list" aria-labelledby="notifications-menu-label" title="Notifications">
                         <img id="notification-icon-img" class="navbar-icon" src="assets/icons/alerts.svg" alt="Notifications">
                         <span id="notification-badge" class="badge" aria-hidden="true"> 0 </span>
                         <span class="sr-only" id="notifications-menu-label"> </span>
@@ -38,7 +38,7 @@
                     </div>
                 </section>
                 <section class="menu-button-links announcement-menu">
-                    <button id="announcement" class="notification BTN" aria-haspopup="true" aria-controls="announcement-list" aria-labelledby="announcements-menu-label">
+                    <button id="announcement" class="notification BTN" aria-haspopup="true" aria-controls="announcement-list" aria-labelledby="announcements-menu-label" title="Announcements">
                         <img id="announcement-icon-img" class="navbar-icon" src="assets/icons/announcements.svg" alt="Announcements">
                         <span id="announcement-badge" class="badge" aria-hidden="true"> 0 </span>
                         <span class="sr-only" id="announcements-menu-label"> </span>
@@ -129,10 +129,11 @@
                 <div class="filter-right flex-row">
                     <label for="sort-combobox"> Sort By: </label>  
                     <select id="sort-combobox">  
-                    <option value="" disabled selected hidden> Course Name...   </option>  
-                    <option value = "Acceleration"> Acceleration   </option>  
+                    <option value="Course Name"> Course Name</option> 
+                    <option value="Course Date"> Course Date</option> 
+                    <!-- <option value = "Acceleration"> Acceleration   </option>  
                     <option value = "Displacement"> Displacement  </option>  
-                    <option value = "Velocity"> Velocity  </option>  
+                    <option value = "Velocity"> Velocity  </option>   -->
                     </select>
                     <button class="BTN sort-icon">
                         <img src="assets/icons/sort.svg" alt="Sort">    
