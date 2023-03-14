@@ -2,10 +2,8 @@
   font-family: quicksand;
   src: url("../assets/Quicksand font 1/Quicksand-VariableFont_wght.ttf");
 }
-
 html, body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
   margin: 0px;
   background-color: #EEEEEE;
@@ -29,73 +27,45 @@ html, body {
 *::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #FFF;
-  background-image: -webkit-gradient(linear, left top, right top, from(#b1aeae), color-stop(51%, #b1aeae), to(#b1aeae));
   background-image: linear-gradient(to right, #b1aeae 0%, #b1aeae 51%, #b1aeae 100%);
 }
 
 .container {
   height: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 1fr);
-  -ms-grid-rows: 56px auto 74px;
-      grid-template-rows: 56px auto 74px;
-      grid-template-areas: "h h h h h h h h h h h h" "c c c c c c c c c c c c" "f f f f f f f f f f f f";
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 56px auto 74px;
+  grid-template-areas: "h h h h h h h h h h h h" "c c c c c c c c c c c c" "f f f f f f f f f f f f";
 }
 
 .main-content {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
   grid-area: c;
 }
 
 .BTN {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
   grid-area: f;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .footer-top {
   height: 34px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  justify-content: center;
+  align-items: start;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
 }
-
 .footer-top a {
   text-transform: uppercase;
   text-decoration: none;
@@ -104,30 +74,22 @@ html, body {
 
 .vertical-line {
   margin: 0 10px 0 8px;
-  color: #0000001F;
+  color: rgba(0, 0, 0, 0.1215686275);
   height: 18px;
 }
 
 .footer-bottom {
   background-color: #E0E1E1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 8px 0;
   height: 24px;
 }
-
 .footer-bottom img {
   width: 90px;
   height: 24px;
 }
-
 .footer-bottom p, .footer-bottom .radio-label {
   color: #616161;
   opacity: 1;
@@ -137,7 +99,7 @@ html, body {
 }
 
 .footer-logo {
-  border-right: 1px solid #0000001F;
+  border-right: 1px solid rgba(0, 0, 0, 0.1215686275);
   margin: 0 16px;
   padding-right: 16px;
   height: 24px;
@@ -153,19 +115,12 @@ html, body {
 }
 
 .header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
   grid-area: h;
   background: url("../assets/header pattern image.png") padding-box;
-  background-color: #25313fbf;
+  background-color: rgba(37, 49, 63, 0.7490196078);
   background-blend-mode: multiply;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-bottom: 2px solid #31B9E4;
   padding: 10.5px 0 9.5px 24px;
 }
@@ -187,10 +142,8 @@ form {
   padding: 0 32px;
   border: 1px solid #FFFFFF;
   border-top: 4px solid #3AC7EC;
-  -webkit-box-shadow: 0px 13px 20px #0000003D;
-          box-shadow: 0px 13px 20px #0000003D;
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
 }
-
 form a {
   text-decoration: none;
 }
@@ -201,20 +154,15 @@ p, .radio-label {
   font-weight: 500;
 }
 
+fieldset {
+  border: none;
+}
+
 .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 
 .form-title {
@@ -315,8 +263,7 @@ p, .radio-label {
   display: block;
   border: none;
   color: #1F2834;
-  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
-          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
   cursor: pointer;
 }
 
@@ -342,15 +289,7 @@ p, .radio-label {
   z-index: 1;
 }
 
-::-webkit-input-placeholder {
-  color: transparent;
-}
-
-:-ms-input-placeholder {
-  color: transparent;
-}
-
-::-ms-input-placeholder {
+::-moz-placeholder {
   color: transparent;
 }
 
@@ -364,9 +303,8 @@ p, .radio-label {
   left: 15px;
   padding: 0 4px;
   background-color: white;
-  color: #666666;
+  color: rgb(102, 102, 102);
   font-size: 16px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 0;
 }
@@ -377,8 +315,16 @@ p, .radio-label {
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-  color: #1f7a54;
+  color: rgb(31, 122, 84);
   /* border: 2px solid purple; */
+}
+
+.input:not(:-moz-placeholder-shown) + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .input:not(:placeholder-shown) + .label {
@@ -387,5 +333,4 @@ p, .radio-label {
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-}
-/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=login.css.map */

@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,14 +19,16 @@
                     <button class="BTN back-button" aria-label="Back">
                         <img  src="assets/icons/back.svg" alt="Back Button" role="none">
                     </button>
-                    <h2 class="form-title"> Log in with Quantum</h2>
+                    <h1 class="form-title"> Log in with Quantum</h1>
                 </div>
-                <div class="flex-container">
-                    <input type="radio" id="District" class="radio-icon" name="school-type" value="District" checked>
-                    <label class="radio-label" for="District">District</label>
-                    <input type="radio" id="Independent School" class="radio-icon" name="school-type" value="Independent School">
-                    <label class="radio-label" for="Independent School">Independent School</label>
-                </div>
+                <!-- <div class="flex-container"> -->
+                    <fieldset class="flex-container">
+                        <input type="radio" id="District" class="radio-icon" name="school-type" value="District" checked>
+                        <label class="radio-label" for="District">District</label>
+                        <input type="radio" id="Independent School" class="radio-icon" name="school-type" value="Independent School">
+                        <label class="radio-label" for="Independent School">Independent School</label>
+                    </fieldset>
+                <!-- </div> -->
                 <div class="dropdown-state underline">
                     <label for="state-combobox" class="dropdown-label">State*</label>
                     <select id="state-combobox" class="dropdown-input" required>  
@@ -46,13 +48,13 @@
                     </select>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="Username/Email ID" required>
-                    <label for="" class="label">Username/Email ID*</label>
+                    <input type="text" class="input" placeholder="Username/Email ID" id="username" required>
+                    <label for="username" class="label">Username/Email ID*</label>
                 </div>
                 <p class="margin-top-none"><a href="" class="forget"> FORGOT USERNAME?</a></p>           
                 <div class="inputContainer flex-container">
-                    <input type="password" class="input" placeholder="Password" required>
-                    <label for="" class="label">Password*</label>
+                    <input type="password" class="input" placeholder="Password" id="pwd" required>
+                    <label for="pwd" class="label">Password*</label>
                     <img class="float-right" src="assets/icons/preview.svg" alt="View Password Icon">
                 </div>
                 <p class="margin-top-none"> <a href="" class="forget">FORGOT PASSWORD?</a></p>

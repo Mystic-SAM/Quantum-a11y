@@ -20,8 +20,8 @@ $btnShadowColor: rgba(0, 0, 0, 0.24);
 $hamburgerHoverColor: #F3F3F3;
 $boxShodowColor: #0000003D;
 $notificationBoxShadowColor: #00000029;
-$validityColor: #D80000;
-$validityBgColor: #FFE4E6;
+$validityColor: #750000;
+$validityBgColor: #FFE5E7;
 
 .green{
     color: $primaryColor;
@@ -55,7 +55,7 @@ $validityBgColor: #FFE4E6;
     transform: translateX(-150%);
     transition: transform 0.3s;
     background-color: $navLinkColor;
-    color: $navLinkActiveColor;
+    color: $primaryTxtColor;
 
     &:focus{
         transform: translateX(0);
@@ -478,7 +478,7 @@ nav{
     margin: 0 16px 16px 0;
 }
 
-#favourite{
+.favourite{
     @include dimensions(20px, 24px);
     margin-left: auto;
 }

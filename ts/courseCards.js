@@ -24,12 +24,12 @@ const setNumofCourses = (courses) => {
 const createStarImgStr = (course) => {
     if (course.isStarred) {
         return ` 
-            <img id="favourite" src="assets/icons/favourite.svg" alt="Favourite">
+            <img class="favourite" src="assets/icons/favourite.svg" alt="Favourite">
         `;
     }
     else {
         return `
-            <img id="favourite" src="assets/icons/favourite.svg" alt="Favourite Icon" style="filter: grayscale(1);" aria-hidden="true">
+            <img class="favourite" src="assets/icons/favourite.svg" alt="Favourite Icon" style="filter: grayscale(1);" aria-hidden="true">
         `;
     }
 };
@@ -38,7 +38,7 @@ const createclassDropdownStr = (course) => {
     classDropdownEl.classList.add("teacher-dropdown");
     if (!course.classes) {
         let selectEl = `
-                    <select class="option-disabled" disabled>  
+                    <select class="option-disabled" aria-label="Select Class" disabled>  
                         <option value = "No Classes"> No Classes</option>  
                     </select>
             `;
