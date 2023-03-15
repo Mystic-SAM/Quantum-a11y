@@ -107,15 +107,15 @@ export const renderCards = (courses) => {
         let courseDateElement = createCourseDateEl(course);
         let cardValidityString = createCardValidityStr(course);
         let cardFooter = `
-            <aside class="card-footer" aria-label="Course Options ${course.name}">
+            <aside class="card-footer" aria-label="Options for Course ${course.name}">
                 <img class="preview-img BTN" src="assets/icons/preview.svg" 
-                alt="Preview course ${course.name}" role="button" title="Preview Course" tabindex="0">
+                alt="Preview course ${course.name}" role="button" title="Preview course ${course.name}" tabindex="0">
                 <img class="manage-course-img BTN" src="assets/icons/manage course.svg" 
-                alt="Manage Course ${course.name}" role="button" title="Manage Course" tabindex="0">
+                alt="Manage Course ${course.name}" role="button" title="Manage Course ${course.name}" tabindex="0">
                 <img class="grade-submission-img BTN" src="assets/icons/grade submissions.svg" 
-                alt="Grade Submisssion for ${course.name}" role="button" title="Submit Grade" tabindex="0">
+                alt="Submit Grade for ${course.name}" role="button" title="Submit Grade for ${course.name}" tabindex="0">
                 <img class="reports-img BTN" src="assets/icons/reports.svg" 
-                alt="Get reports for ${course.name} " role="button" title="Get Reports" tabindex="0">
+                alt="Get reports for ${course.name}" role="button" title="Get reports for ${course.name}" tabindex="0">
             </aside>
         `;
         cardEl += `
